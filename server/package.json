@@ -1,0 +1,26 @@
+{
+  "name": "product-server",
+  "version": "1.0.0",
+  "description": " Express server which connects to the database that holds a products data such as name,  price and imageurl, and add queries/mutations which enable you to create, read, list and delete products",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon server"
+  },
+  "keywords": [
+    "product management"
+  ],
+  "author": "nkengderick",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "faker": "^5.5.3",
+    "mongoose": "^8.0.2",
+    "mongoose-auto-increment": "^5.0.1",
+    "nodemon": "^3.0.2"
+  }
+}

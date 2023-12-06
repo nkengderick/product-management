@@ -1,0 +1,47 @@
+/* In your home.css file */
+
+.Home {
+    padding: 20px;
+  }
+  
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .product-card {
+    width: 48%; 
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    height: fit-content;
+  }
+  
+  .product-card img {
+    width: 40%;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+    height: 200px;
+  }
+  
+  .product-card div {
+    padding: 10px;
+    flex-grow: 1;
+  }
+  
+  .product-card h3 {
+    margin-top: 0;
+  }
+  
+  .nodisplay {
+    display: none;
+  }
+  
+  .display {
+    display: block;
+  }
+  

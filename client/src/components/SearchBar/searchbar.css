@@ -1,0 +1,31 @@
+
+.SearchBar {
+    margin-bottom: 20px;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+.SearchBar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100px;
+    transition: width 400ms ease-in;
+  }
+  
+  .SearchBar input:focus {
+    width: 100%;
+  }
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #555;
+    pointer-events: none;
+  }
+  
