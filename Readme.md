@@ -31,13 +31,67 @@ Exposes five main functionalities:
 - **deleteProduct:** Fetches a specific product by id and deletes it.
 - **updateProduct:** Fetches a specific product by id and edits it with provided information.
 
+### React Frontend Components
+
+The React frontend of the Product Management System includes several components for a user-friendly interface.
+
+### Home Component
+
+The `Home` component serves as the landing page where users can view a list of products, search for products by name, and filter products based on categories.
+
+- Features:
+  - Display a list of products with images, names, prices, and categories.
+  - Implement a search bar to filter products by name.
+  - Responsive design for optimal user experience.
+
+### ProductForm Component
+
+The `ProductForm` component provides a form for users to add new products to the system.
+
+- Features:
+  - Input fields for product name, image URL, price, and category.
+  - Submission of the form sends data to the server for product creation.
+  - User-friendly interface for adding products.
+
+### ProductList Component
+
+The `ProductList` component offers an organized view of products with filtering options.
+
+- Features:
+  - Display products in a card format with images and details.
+  - Filter products by category and price range using dropdown menus.
+  - Real-time updating of the product list based on user selections.
+
+### SearchBar Component
+
+The `SearchBar` component is a reusable search bar used in the `Home` component.
+
+- Features:
+  - Input field for searching products by name.
+  - Dynamic updating of the product list based on user input.
+
+### Styling and UI Enhancements
+
+CSS styles have been applied to enhance the user interface, including:
+
+- Responsive design for optimal viewing on various devices.
+- Consistent styling across components for a cohesive look and feel.
+
+Feel free to explore each component for a detailed understanding of their features and functionality.
+
+
 ## Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/product-management-system.git
+   git clone https://github.com/nkengderick/product-management.git
    cd product-management-system
+
+2. Navigate to the Project directory
+    ```
+    cd project-management
+    ```
 
 2. Install server dependencies
     ```
@@ -59,7 +113,18 @@ create a `.env` file in the `server` directory and provide your mongoDB string a
     cd server
     npm start
     ```
+4. Install client dependencies
+    ```
+    cd client
+    npm install
+    ```
 
+6. Run the client
+    ```
+    cd client
+    # $env:REACT_APP_API_URL="your_server_url e.g http://localhost:5000/api"
+    # >> npm start
+    ```
 
 
 ## Contributing
@@ -69,5 +134,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
 
