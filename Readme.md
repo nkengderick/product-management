@@ -93,13 +93,13 @@ Feel free to explore each component for a detailed understanding of their featur
     cd project-management
     ```
 
-2. Install server dependencies
+3. Install server dependencies
     ```
     cd server
     npm install
     ```
 
-3. Set up MonogoDB connection
+4. Set up MonogoDB connection
 create a `.env` file in the `server` directory and provide your mongoDB string and prefered port
 
     ```
@@ -107,42 +107,43 @@ create a `.env` file in the `server` directory and provide your mongoDB string a
     MONGODB_URI: 'your_mongodbconnection_string'
     ```
 
-4. Run the Server
+5. Run the Server
 
     ```
     cd server
     npm start
     ```
-4. Install client dependencies
+6. Install client dependencies
     ```
     cd client
     npm install
     ```
 
-6. Run the client
+7. Run the client
     ```
     cd client
     # $env:REACT_APP_API_URL="your_server_url e.g http://localhost:5000/api"
     # >> npm start
     ```
+8. Host the site
 
 
 ## How to Use
 
   ### 1. Search for Products on Home Page
   
-    - On the Home page, you can use the search bar to find products by name or category.
-    - Simply start typing in the search bar, and the product list will dynamically update based on your search term.
+    - On the Home page, you can use the search bar to find products by `name` or `category`.
+    - Simply start typing in the `search bar`, and the product list will dynamically update based on your search term.
   
   ### 2. View and Sort Products on Product List Page
   
-    - Navigate to the Product List page by clicking Products top right.
-    - Use the dropdown menus to filter products based on category and price range.
+    - Navigate to the Product List page by clicking `Products` top right.
+    - Use the dropdown menus to filter products based on `category` and `price range`.
     - The product list will update in real-time according to the selected category and price range.
   
   ### 3. Add a New Product
   
-    - Navigate to tha Add Product page by clicking Add Product top right.
+    - Navigate to tha Add Product page by clicking `Add Product` top right.
     - Fill in the required details, such as name, image URL, price, and category.
     - Click the "Add Product" or "Submit" button to add the new product to the database.
   
