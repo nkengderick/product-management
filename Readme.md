@@ -127,6 +127,27 @@ create a `.env` file in the `server` directory and provide your mongoDB string a
     ```
 
 
+## How to Use
+
+  ### 1. Search for Products on Home Page
+  
+    - On the Home page, you can use the search bar to find products by name or category.
+    - Simply start typing in the search bar, and the product list will dynamically update based on your search term.
+  
+  ### 2. View and Sort Products on Product List Page
+  
+    - Navigate to the Product List page by clicking Products top right.
+    - Use the dropdown menus to filter products based on category and price range.
+    - The product list will update in real-time according to the selected category and price range.
+  
+  ### 3. Add a New Product
+  
+    - Navigate to tha Add Product page by clicking Add Product top right.
+    - Fill in the required details, such as name, image URL, price, and category.
+    - Click the "Add Product" or "Submit" button to add the new product to the database.
+  
+  Feel free to explore other features and functionalities provided by the application.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
