@@ -1,0 +1,113 @@
+.inventory-tracking {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .inventory-heading {
+    color: #333;
+    text-align: center;
+  }
+  
+  .category-section {
+    margin-bottom: 20px;
+  }
+  
+  .category-title {
+    color: #555;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: left;
+  }
+
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .heading {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: aliceblue;
+  }
+
+  .product-row:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .product-row:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  .product-row:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+  }
+
+  .low-stock {
+    background-color: #f8df94
+  }
+  
+  .product-name, .unit-price, .stock-quantity, .product-total {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tfoot {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tfoot .total-label {
+    padding-top: 10px;
+  }
+  
+  .category-total-quantity, .category-total-price {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+.quantity-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .quantity-actions button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .quantity-actions button:hover {
+    background-color: #0056b3;
+  }
+    
+.stock-quantity {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.delete-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  

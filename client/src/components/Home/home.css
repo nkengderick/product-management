@@ -1,40 +1,13 @@
-/* In your home.css file */
 
 .Home {
-    padding: 20px;
+    padding: 0px;
   }
   
   .product-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
-  }
-  
-  .product-card {
-    width: 48%; 
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    height: fit-content;
-  }
-  
-  .product-card img {
-    width: 40%;
-    object-fit: cover;
-    border-right: 1px solid #ddd;
-    height: 200px;
-  }
-  
-  .product-card div {
-    padding: 10px;
-    flex-grow: 1;
-  }
-  
-  .product-card h3 {
-    margin-top: 0;
   }
   
   .nodisplay {
@@ -45,3 +18,49 @@
     display: block;
   }
   
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #2980b9;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container .card {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.card h2, .card h3 {
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}

@@ -1,0 +1,40 @@
+/* reports.css */
+
+.inventory-report {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+.inventory-report h2 {
+    color: #333;
+  }
+  
+.inventory-report p {
+    margin-bottom: 10px;
+  }
+  
+.inventory-report h3 {
+    margin-top: 20px;
+    color: #555;
+  }
+  
+.inventory-report ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+.inventory-report li {
+    margin-bottom: 5px;
+    color: #ff6347;
+  }
+  
+.inventory-report h4 {
+    margin-top: 15px;
+    color: #4caf50; 
+  }
+  
+  

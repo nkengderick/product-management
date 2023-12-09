@@ -1,0 +1,36 @@
+
+.Categories {
+    padding: 20px;
+  }
+  
+  .category-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .category-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1 0 30%;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .category {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .count, .quantity, .price {
+    color: #666;
+  }
+    

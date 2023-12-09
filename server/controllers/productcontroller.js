@@ -3,14 +3,14 @@ const Product = require('../models/Product')
 const createProduct = async (req, res) => {
     try {
         
-        const { id, name, imageUrl, price, category } = req.body
+        const { id, name, imageUrl, price, category, quantity } = req.body
         
         const existingProduct = await Product.findOne({id});
         if (existingProduct) {
             return res.status(409).json({ message: "Product with ID already exists." });
           }
           
-        const product = new Product({ id, name, imageUrl, price, category })
+        const product = new Product({ id, name, imageUrl, price, category, quantity })
         await product.save()
 
         res.status(200)
@@ -96,14 +96,14 @@ const deleteProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
     try {
         const { id } = req.params
-        const updates = req.body
-        const updatedProduct = await Product.findOneAndUpdate({ id: id}, updates, {new: true})
+        const { name, price, imageUrl, category, quantity } = req.body
+        const updatedProduct = await Product.findOneAndUpdate({ id: id}, { name, price, imageUrl, category, quantity }, {new: true})
         if (!updatedProduct) {
             res.json({ message: 'Product not found.' });
             res.status(404)
         } else {
             res.status(200)
-            res.json([{message: 'Product Successfully Updated' }, updatedProduct])
+            res.json({message: 'Product Successfully Updated' })
         }
     } catch(error) {
         console.error(error)
@@ -120,6 +120,11 @@ const createRandomProducts = async (req, res) => {
             return `category${categoryNumber}`
         }
 
+        const getRandomQuantity = () => {
+            const quantity = Math.floor(Math.random() * 10) + 4
+            return `${quantity}`
+        }
+
         const getRandomImageUrl = () => {
             const randomId = Math.floor(Math.random() * 1000)
             return `https://picsum.photos/200/300?random=${randomId}`
@@ -132,6 +137,7 @@ const createRandomProducts = async (req, res) => {
                 price: Math.floor(Math.random() * 1000) + 1,
                 category: getRandomCategory(),
                 imageUrl: getRandomImageUrl(),
+                quantity: getRandomQuantity(),
             })
 
             const product = await randomProduct.save()

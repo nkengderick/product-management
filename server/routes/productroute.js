@@ -15,7 +15,7 @@ router.route('/product/id:id')
 router.route('/product/name:name')
     .get(getProductByName)
 
-// router.route('/products/random')
-//     .post(createRandomProducts)
-        
+router.route('/products/random')
+    .post(createRandomProducts)
+     
 module.exports = router

@@ -1,30 +1,56 @@
 import './productform.css'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-const ProductForm = ({ onSubmit }) => {
+const ProductForm = ({ product, onClose }) => {
     const [name, setName] = useState('');
     const [imageUrl, setImageUrl] = useState('');
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('');
+    const [quantity, setQuantity] = useState('');
   
+    useEffect(() => {
+        if (product) {
+            setName(product.name)
+            setCategory(product.category)
+            setImageUrl(product.imageUrl)
+            setPrice(product.price)
+            setQuantity(product.quantity)
+        }
+    }, [product])
+
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const id = Date.now()
-          const response = await axios.post(`${process.env.REACT_APP_API_URI}/products`, {
-            id,
-            name,
-            imageUrl,
-            price,
-            category,
-          });
-            console.log(response.data);
-            setName('');
-            setImageUrl('');
-            setPrice('');
-            setCategory('');
+        if(product){
+            const response = await axios.put(`${process.env.REACT_APP_API_URL}/product/id${product.id}`, {
+                name, 
+                imageUrl, 
+                price, 
+                category,
+                quantity
+            })
+            const { message } = response.data
+            alert(message)
+            onClose()
+        }else {
+            const id = Date.now()
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/products`, {
+                id,
+                name,
+                imageUrl,
+                price,
+                category,
+                quantity,
+              });
+                console.log(response.data);
+                setName('');
+                setImageUrl('');
+                setPrice('');
+                setCategory('');
+                setQuantity('');
+        }
       } catch(error) {
             console.error("Error Creating Product: ", error)
       }
@@ -47,6 +73,10 @@ const ProductForm = ({ onSubmit }) => {
                 <label>
                     <p>Category: </p>
                     <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+                </label>
+            <   label>
+                    <p>Quantity: </p>
+                    <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
                 </label>
                 <button type="submit">Add Product</button>
             </form>

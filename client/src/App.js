@@ -8,7 +8,9 @@ import NotFound from './components/Notfound/NotFound';
 import ProductList from './components/ProductList/ProductList';
 import ProductForm from './components/ProductForm/ProductForm';
 import Home from './components/Home/Home';
-
+import Categories from './components/Categories/Categories';
+import InventoryTracking from './components/Inventory/InventoryTracking';
+import Report from './components/Reports/Report'
 
 const App = () => {
   return (
@@ -32,11 +34,51 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
+                    <Route path='/product/:category'>
+                        <div>
+                            <Header />
+                            <ProductList />
+                           
+                            <Footer />
+                        </div>
+                    </Route>
                     <Route path='/add-product'>
                         <div>
                             <Header />
                             <ProductForm />
                            
+                            <Footer />
+                        </div>
+                    </Route>
+                    <Route path='/add-product/:id'>
+                        <div>
+                            <Header />
+                            <ProductForm />
+                           
+                            <Footer />
+                        </div>
+                    </Route>
+                    <Route path='/categories'>
+                        <div>
+                            <Header />
+                            <Categories />
+
+                            <Footer />
+                        </div>
+                    </Route>
+                    <Route path='/inventories'>
+                        <div>
+                            <Header />
+                            <InventoryTracking />
+
+                            <Footer />
+                        </div>
+                    </Route>
+                    <Route path='/report'>
+                        <div>
+                            <Header />
+                            <Report />
+
                             <Footer />
                         </div>
                     </Route>

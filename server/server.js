@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true, }))
 app.use('/api', require('./routes/productroute'))
 
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 10000 })
   .then(() => {
     console.log("connected to db");
     app.listen(PORT, () => {

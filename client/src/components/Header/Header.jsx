@@ -12,6 +12,9 @@ const Header = () => {
         <nav className='nav-links'>
             <Link to='/products'>Products</Link>
             <Link to='/add-product'>Add a Product</Link>
+            <Link to='/categories'>Explore Categories</Link>
+            <Link to='/inventories'>Track Inventories</Link>
+            <Link to='/report'>Report</Link>
         </nav>
     </div>
   )
