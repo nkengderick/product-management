@@ -5,7 +5,7 @@ This project demonstrates a full-stack application for managing products, built 
 ## Features
 
 - Create, read, update, and delete products using ExpressJs queries and mutations.
-- Manage product information like name, image URL, price, and category.
+- Manage product information like name, image URL, price, quantity and category.
 - Includes a pre-populated database with 500 randomized products with images from [picsum.photos](https://picsum.photos/).
 
 ## Stack
@@ -18,7 +18,7 @@ This project demonstrates a full-stack application for managing products, built 
 
 ### Product Model
 
-- A Mongoose schema defines a product structure with fields for name, imageUrl, price, and category.
+- A Mongoose schema defines a product structure with fields for name, imageUrl, price, quantity and category.
 - Auto-incrementing IDs ensure unique identifiers for each product.
 
 ### RESTFul API
@@ -69,6 +69,23 @@ The `SearchBar` component is a reusable search bar used in the `Home` component.
 - Features:
   - Input field for searching products by name.
   - Dynamic updating of the product list based on user input.
+
+### InventoryTracking Component
+
+The `InventoryTracking` component allows users to track inventory levels, update quantities, and delete products.
+
+- Features:
+  - Displays current stock levels and allows users to increment, decrement, or delete products from the inventory table.
+  - Provides visual cues for low-stock items.
+
+### Report Component
+
+The `Report` component generates a report summarizing the number of categories, products, quantity, unit price, and total price for each category.
+
+- Features:
+  - Provides an overview of the inventory with category-wise totals and average unit price.
+  - Lists low-stock items and allows users to print the report.
+
 
 ### Styling and UI Enhancements
 
@@ -148,6 +165,17 @@ create a `.env` file in the `server` directory and provide your mongoDB string a
 - Click the "Add Product" or "Submit" button to add the new product to the database.
 
 Feel free to explore other features and functionalities provided by the application.
+
+### 4. Track Inventory
+
+- Navigate to the `InventoryTracking` page by clicking `Inventory` top right.
+- View current stock levels, increment, decrement, or delete products directly from the inventory table.
+
+### 5. Generate and Print Inventory Report
+
+- Navigate to the `Report` page by clicking `Report` top right.
+- View a summary of the number of categories, products, quantity, unit price, and total price for each category.
+- Print the report for your records.
 
 ## Contributing
 
