@@ -48,8 +48,7 @@ const InventoryTracking = () => {
         const response = await axios.put(`${process.env.REACT_APP_API_URL}/product/id${productId}`, {
             quantity: updatedInventory.find((item) => item.id === productId)?.quantity,
         });
-        const {message} = response.data
-        alert(`Incremented:  ${message}`)
+        alert(`Incremented to ${updatedInventory.find((item) => item.id === productId)?.quantity}: ${response.data.message}`)
         setInventory(updatedInventory);
   };
 
@@ -61,8 +60,7 @@ const InventoryTracking = () => {
         const response = await axios.put(`${process.env.REACT_APP_API_URL}/product/id${productId}`, {
           quantity: updatedInventory.find((item) => item.id === productId)?.quantity,
         });
-        const {message} = response.data
-        alert(`Decremented: ${message}`)
+        alert(`Decremented to ${updatedInventory.find((item) => item.id === productId)?.quantity}: ${response.data.message}`)
         setInventory(updatedInventory);
 
   };
@@ -81,7 +79,7 @@ const InventoryTracking = () => {
   useEffect(() => {
     inventory.forEach((item) => {
         if(item.quantity <= lowStockThreshHold ) {
-            alert(`Low Stock alert for ${item.name}. Current Stock: ${item.quantity}`)
+            //alert(`Low Stock alert for ${item.name}. Current Stock: ${item.quantity}`)
         }
     })
   }, [inventory, lowStockThreshHold])

@@ -99,11 +99,11 @@ const updateProduct = async (req, res) => {
         const { name, price, imageUrl, category, quantity } = req.body
         const updatedProduct = await Product.findOneAndUpdate({ id: id}, { name, price, imageUrl, category, quantity }, {new: true})
         if (!updatedProduct) {
-            res.json({ message: 'Product not found.' });
+            res.json({ message: 'Product not found.', product: updateProduct });
             res.status(404)
         } else {
+            res.json({ message: 'Product Successfully Updated' })
             res.status(200)
-            res.json({message: 'Product Successfully Updated' })
         }
     } catch(error) {
         console.error(error)

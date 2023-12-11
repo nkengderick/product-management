@@ -1,9 +1,10 @@
 
 .SearchBar {
-    margin-bottom: 20px;
+    margin-right: 20px;
   }
   
   .search-container {
+    margin: 20px;
     position: relative;
   }
   
@@ -29,3 +30,14 @@
     pointer-events: none;
   }
   
+
+@media only screen and (max-width: 600px) {
+  .SearchBar input {
+    font-size: 14px;
+  }
+
+  .search-icon {
+    right: 5px; 
+  }
+}
+

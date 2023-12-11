@@ -15,13 +15,13 @@ const Footer = () => {
         </nav> 
         <ul className='footer-icons'>
           <li className='footer-icon'>
-            <Link className='footer-icon-link' to="https://www.facebook.com/your-page"><FaFacebook /> Facebook</Link>
+            <Link className='footer-icon-link' to="https://www.facebook.com/your-page"><FaFacebook /></Link>
           </li>
           <li className='footer-icon'>
-            <Link className='footer-icon-link' to="https://www.twitter.com/your-page"><FaTwitter /> Twitter</Link>
+            <Link className='footer-icon-link' to="https://www.twitter.com/your-page"><FaTwitter /></Link>
           </li>
           <li className='footer-icon'>
-            <Link className='footer-icon-link' to="mailto:contact@yourcompany.com"><FaPhone /> Contact Us</Link>
+            <Link className='footer-icon-link' to="mailto:contact@yourcompany.com"><FaPhone /></Link>
           </li>
         </ul>
       </footer>

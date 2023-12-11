@@ -1,6 +1,7 @@
 
 .ProductList {
     margin: 0 auto;
+    padding: 0 20px;
   }
   
   h2 {
@@ -10,12 +11,13 @@
   
   .dropdown {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
 
   .input-label {
     flex-grow: 1;
+    margin-bottom: 10px;
   }
   
   .menu {
@@ -33,5 +35,15 @@
     font-size: 16px;
     text-align: center;
   }
+
+  @media only screen and (max-width: 600px) {
+    .dropdown {
+      flex-direction: column;
+    }
   
-  
+    .input-label,
+    .menu {
+      width: 100%;
+      margin-right: 0;
+    }
+  }

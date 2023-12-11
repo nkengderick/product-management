@@ -56,16 +56,20 @@ const Home = () => {
                     ))}
             </main>
            {/* Hero Section */}
-      <div className="hero-section card">
-        <h1>Welcome to My Product Manager</h1>
-        <p>Your personalized tool to manage and track your products efficiently.</p>
+      <div className='hero-section card-container'>
+        <div className="hero-section card">
+          <h1>Welcome to My Product Manager</h1>
+          <p>Your personalized tool to manage and track your products efficiently.</p>
+        </div>
       </div>
 
       {/* Call-to-action */}
-      <div className="cta-section card">
-        <p>Ready to get started?</p>
-        <Link to="/products" className="cta-button card-button">Manage Products</Link>
-      </div>
+      <div className="cta-section card-container">
+        <div className="cta-section card">
+          <p>Ready to get started?</p>
+          <Link to="/products" className="cta-button card-button">Manage Products</Link>
+        </div>
+      </div>  
 
       {/* Featured Products or Services */}
       <div className="featured-items card-container">

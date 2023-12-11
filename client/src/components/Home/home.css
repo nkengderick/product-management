@@ -1,6 +1,6 @@
 
 .Home {
-    padding: 0px;
+    padding: 2rem;
   }
   
   .product-cards {
@@ -63,4 +63,25 @@
 
 .card p {
   color: #666;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    margin: 10px 0;
+    width: 80%;
+
+  }
+  .product-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-section,
+  .cta-section,
+  .featured-items,
+  .featured-categories,
+  .insight-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

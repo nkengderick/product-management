@@ -1,53 +1,53 @@
 
-.product-card {
-    display: grid;
-    grid-template-rows: 4fr 2fr 1fr;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .product-card-details {
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .product-card-details h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .product-card-details p {
-    margin: 5px 0;
-  }
 
-  .product-card-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 8px;
-    opacity: 0;
-  }
-  
-    .product-card:hover .product-card-buttons {
-      opacity: 1;
-    }
-  
-  
+ .product-card {
+  display: grid;
+  grid-template-rows: 4fr 2fr 1fr;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card-details {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.product-card-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-card-details p {
+  margin: 5px 0;
+}
+
+.product-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 8px;
+  opacity: 0;
+}
+
+.product-card:hover .product-card-buttons {
+  opacity: 1;
+}
+
 .product-card-del-btn,
 .product-card-upd-btn {
   background-color: #ff5555;
@@ -60,14 +60,24 @@
 }
 
 .product-card-upd-btn {
-  background-color: #4caf50; /* Green color for update button */
+  background-color: #4caf50;
 }
 
 .product-card-del-btn:hover,
 .product-card-upd-btn:hover {
-  background-color: #cc0000; /* Darker red color on hover for delete button */
+  background-color: #cc0000;
 }
 
 .product-card-upd-btn:hover {
-  background-color: #45a049; /* Darker green color on hover for update button */
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-card {
+    grid-template-rows: auto auto auto;
+  }
+
+  .product-card-buttons {
+    opacity: 1;
+  }
 }

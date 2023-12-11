@@ -57,6 +57,7 @@ const ProductForm = ({ product, onClose }) => {
     };
     return (
         <div className='ProductForm'>
+            <h1>{product? `Update Product ${name}` : 'Add a New Product'}</h1>
             <form className='Form' onSubmit={handleSubmit}>
                 <label>
                     <p>Name: </p>
@@ -78,7 +79,7 @@ const ProductForm = ({ product, onClose }) => {
                     <p>Quantity: </p>
                     <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
                 </label>
-                <button type="submit">Add Product</button>
+                <button type="submit">{product? 'Update Product' : 'Add Product'}</button>
             </form>
         </div>
     )
