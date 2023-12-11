@@ -79,7 +79,7 @@ const InventoryTracking = () => {
   useEffect(() => {
     inventory.forEach((item) => {
         if(item.quantity <= lowStockThreshHold ) {
-            //alert(`Low Stock alert for ${item.name}. Current Stock: ${item.quantity}`)
+            alert(`Low Stock alert for ${item.name}. Current Stock: ${item.quantity}`)
         }
     })
   }, [inventory, lowStockThreshHold])
