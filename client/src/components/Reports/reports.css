@@ -1,34 +1,42 @@
-/* reports.css */
 
 .inventory-report {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: sans-serif;
+  width: 80%;
   }
   
 .inventory-report h2 {
     color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
   }
   
 .inventory-report p {
     margin-bottom: 10px;
+    font-size: 16;
+    line-height: 1.5em;
   }
   
 .inventory-report h3 {
     margin-top: 20px;
     color: #555;
+    font-size: 18px;
   }
   
 .inventory-report ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 0;
   }
   
 .inventory-report li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #ff6347;
   }
   
@@ -38,3 +46,25 @@
   }
   
   
+  li {
+    margin-bottom: 10px;
+  }
+/*   
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .average-unit-price {
+    text-align: right;
+  }
+  
+  .print-button {
+    margin-top: 20px;
+  }
+   */

@@ -45,7 +45,7 @@ const Categories = () => {
       <h2>Categories</h2>
       <ul className="category-list">
         {categories.map((category) => (
-          <Link to={`/product/${category.category}`} key={category.category} className='category-card'>
+          <Link to={`/products/${category.category}`} key={category.category} className='category-card'>
             <h2 className="category">{category.category}</h2>
               <p className="count"> {category.count} Products Avalaible </p>
               <p className="quantity">Total Stock: {category.totalQuantity}</p>

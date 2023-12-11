@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -26,7 +26,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/products'>
+                    <Route exact path='/products'>
                         <div>
                             <Header />
                             <ProductList />
@@ -34,7 +34,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/product/:category'>
+                    <Route path='/products/:category'>
                         <div>
                             <Header />
                             <ProductList />
@@ -42,7 +42,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/add-product'>
+                    <Route exact path='/add-product'>
                         <div>
                             <Header />
                             <ProductForm />
@@ -58,7 +58,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/categories'>
+                    <Route exact path='/categories'>
                         <div>
                             <Header />
                             <Categories />
@@ -66,7 +66,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/inventories'>
+                    <Route exact path='/inventories'>
                         <div>
                             <Header />
                             <InventoryTracking />
@@ -74,7 +74,7 @@ const App = () => {
                             <Footer />
                         </div>
                     </Route>
-                    <Route path='/report'>
+                    <Route exact path='/report'>
                         <div>
                             <Header />
                             <Report />

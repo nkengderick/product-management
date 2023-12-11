@@ -7,6 +7,7 @@ This project demonstrates a full-stack application for managing products, built 
 - Create, read, update, and delete products using ExpressJs queries and mutations.
 - Manage product information like name, image URL, price, quantity and category.
 - Includes a pre-populated database with 500 randomized products with images from [picsum.photos](https://picsum.photos/).
+- User Interface integrated to interact with the server
 
 ## Stack
 
@@ -183,5 +184,5 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the ISC License - see the [LICENSE](https://choosealicense.com/licenses/isc/) file for details.
 
