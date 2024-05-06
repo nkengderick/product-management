@@ -116,7 +116,7 @@ const createRandomProducts = async (req, res) => {
     try {
         
         const getRandomCategory = () => {
-            const categoryNumber = Math.floor(Math.random() * 10) + 1
+            const categoryNumber = Math.floor(Math.random() * 4) + 1
             return `category${categoryNumber}`
         }
 
@@ -130,7 +130,7 @@ const createRandomProducts = async (req, res) => {
             return `https://picsum.photos/200/300?random=${randomId}`
         }
 
-        for (let i = 1; i <= 500; i++) {
+        for (let i = 1; i <= 25; i++) {
             const randomProduct = new Product({
                 id: i,
                 name: `Product ${i}`,
@@ -145,7 +145,7 @@ const createRandomProducts = async (req, res) => {
         }
 
         res.status(200)
-        res.json({message: '500 Random Products added'})
+        res.json({message: '25 Random Products added'})
 
     } catch(error) {
         console.error(error)

@@ -109,52 +109,39 @@
   .delete-button:hover {
     background-color: #c82333;
   }
-  
-  @media only screen and (max-width: 600px) {
 
-    .product-table {
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-    }
-  
-    .category-title {
-      font-size: large;
-    }
-  
-    .stock-quantity {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .delete-button {
-      margin-top: 10px;
-    }
-    .product-name, .unit-price, .stock-quantity, .product-total {
-      padding: 5px;
-    }
-  
-    .quantity-actions {
-      margin: 0;
-    }
-  
-    .product-table .heading {
-      display: none;
-    }
-  
-    .product-row {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .product-row > div {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 5px;
-    }
 
-    .product-row > div > div {
-      flex-grow: 1;
-    }
+  /* Add this CSS at the end of your existing styles */
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .inventory-tracking {
+    padding: 10px;
   }
   
+  .category-title {
+    font-size: large;
+  }
+  
+  .product-table {
+    font-size: small;
+  }
+  
+  .heading {
+    font-size: small;
+  }
+  
+  .product-name, .unit-price, .stock-quantity, .product-total {
+    font-size: small;
+  }
+  
+  .quantity-actions button {
+    padding: 3px 6px;
+    font-size: x-small;
+  }
+  
+  .delete-button {
+    padding: 3px 6px;
+    font-size: x-small;
+  }
+}
